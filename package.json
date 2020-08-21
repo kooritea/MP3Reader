@@ -1,0 +1,31 @@
+{
+  "name": "@kooritea-tool/mp3reader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --config webpack.config.build.js",
+    "release": "npm version patch --no-git-tag-version && npm run build && npm publish --access=public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@kooritea-tool/ab-utils": "0.0.9"
+  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "bugs": {
+    "url": "https://github.com/kooritea/MP3Reader/issues"
+  },
+  "homepage": "https://github.com/kooritea/MP3Reader"
+}
