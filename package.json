@@ -1,16 +1,18 @@
 {
   "name": "@kooritea-tool/mp3reader",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx webpack --watch --config webpack.config.build.js",
     "build": "npx webpack --config webpack.config.build.js",
     "release": "npm version patch --no-git-tag-version && npm run build && npm publish --access=public"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^14.6.0",
     "ts-loader": "^8.0.2",
     "typescript": "^3.9.7",
     "uglifyjs-webpack-plugin": "^2.2.0",
@@ -21,7 +23,6 @@
     "@kooritea-tool/ab-utils": "0.0.9"
   },
   "files": [
-    "src/",
     "dist/"
   ],
   "bugs": {

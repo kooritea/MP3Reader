@@ -342,7 +342,6 @@ export class ID3V2Frame{
     /**
      * header里面定义的size包括了头、所有标签，还有一段使用
      */
-    const mp3Body = this.mp3.slice(this.size+10)
     this.size = header.byteLength - 10
 
     let a = Math.floor(this.size/0x200000)
@@ -353,10 +352,7 @@ export class ID3V2Frame{
     writeInt(header,8,1,c)
     let d =  Math.floor((this.size - a*0x200000 - b*0x4000 - c*0x80))
     writeInt(header,9,1,d)
-    return concat(
-      header,
-      mp3Body
-    )
+    return header
   }
 
   public findLabel(name:string){

@@ -2,7 +2,7 @@ import { ID3V2Frame } from './frame/ID3V2'
 import { ID3V1Frame } from './frame/ID3V1'
 import { concat } from '@kooritea-tool/ab-utils'
 
-export default class MP3Reader{
+export class MP3Reader{
 
   public ID3V2:ID3V2Frame
   public ID3V1:ID3V1Frame
